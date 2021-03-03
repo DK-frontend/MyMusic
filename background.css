@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efcb7b;
+    font-family: 'Source Sans Pro', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+body.render {
+    opacity: 1;
+}
+
+.shape-overlays {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.shape-overlays.is-opened {
+    pointer-events: auto;
+}
+
+.shape-overlays_path:nth-of-type(1) {
+    fill: #dce3f1;
+}
+
+.shape-overlays_path:nth-of-type(2) {
+    fill: #869ccc;
+}
+
+.shape-overlays_path:nth-of-type(3) {
+    fill: #30436f;
+}
+
+.shape-overlays_path:nth-of-type(4) {
+    fill: #0d1831;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐可视化</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="background.css">
+    <script src="./snap.svg-min.js"></script>
+    <!-- <style>
+        body {
+            background-color: yellow;
+        }
+    </style> -->
+</head>
+
+<body>
+    <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path class="shape-overlays_path"></path>
+        <path class="shape-overlays_path"></path>
+        <path class="shape-overlays_path"></path>
+        <path class="shape-overlays_path"></path>
+    </svg>
+    <div class="keypad">
+        <div class="row">
+            <div class="col" id="rect11">
+                <img src="./assets/icons/audio_icon11.svg" alt="沙锤">
+            </div>
+            <div class="col" id="rect12">
+                <img src="./assets/icons/audio_icon12.svg" alt="脚鼓">
+            </div>
+            <div class="col" id="rect13">
+                <img src="./assets/icons/audio_icon13.svg" alt="饶钹">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" id="rect21">
+                <img src="./assets/icons/audio_icon21.svg" alt="踏钹">
+            </div>
+            <div class="col" id="rect22">
+                <img src="./assets/icons/audio_icon22.svg" alt="军鼓">
+            </div>
+            <div class="col" id="rect23">
+                <img src="./assets/icons/audio_icon23.svg" alt="掌声">
+            </div>
+        </div>
+    </div>
+    <div class="control_area">
+        <!-- <div class="bgmusic">DRINK ABOUT</div> -->
+        <div class="bgmusic">
+            <ul class="slipdown">
+                <li>请选择歌曲</li>
+                <li>DRINK ABOUT</li>
+                <li>SOLD OUT</li>
+                <li>LOSER</li>
+                <li>庆功酒</li>
+                <li>白月光与朱砂痣</li>
+                <!-- <li>
+                    <a href="javascript:;" class="a-upload">
+                        <input type="file" name="" id="file" onchange="loadFile(this.files[0])">点击这里上传文件
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <div class="status_bar">
+            <div id="recording">
+                <img src="./assets/icons/pause.svg" alt="暂停" id="pauseIcon">
+                <a href=""><img src="./assets/icons/stop.svg" alt="录制" id="stopIcon"></a>
+            </div>
+            <div id="notrecording">
+                <img src="./assets/icons/play.svg" alt="播放" id="startIcon">
+            </div>
+        </div>
+    </div>
+    <script src="./animations.js"></script>
+    <script src="./background.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

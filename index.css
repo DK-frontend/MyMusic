@@ -1,0 +1,189 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    /* user-select: none; */
+    overflow: hidden;
+}
+
+.keypad {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    /* z-index: 100; */
+    padding-top: 24px;
+}
+
+.row {
+    display: flex;
+}
+
+.row:first-child {
+    align-items: flex-end;
+}
+
+.row:last-child {
+    align-items: flex-start;
+    margin-top: 48px;
+}
+
+.col {
+    width: 100px;
+    height: 100px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 28px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.col>img {
+    width: 80px;
+}
+
+#rect11 {
+    background: #0c7b93;
+}
+
+#rect12 {
+    background: #27496d;
+    height: 200px;
+}
+
+#rect13 {
+    background: #00a8cc;
+}
+
+#rect21 {
+    background: #00a8cc;
+}
+
+#rect22 {
+    background: #27496d;
+    height: 200px;
+}
+
+#rect23 {
+    background: #0c7b93;
+}
+
+.control_area {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+}
+
+.control_area>div {
+    width: 400px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 40px;
+    color: black;
+}
+
+.bgmusic {
+    background-color: #ffefe5;
+    text-align: center;
+    font-size: 36px;
+}
+
+.slipdown {
+    width: 400px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    overscroll-behavior: contain
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.slipdown li {
+    width: 400px;
+    height: 100px;
+    line-height: 80px;
+    border-radius: 40px;
+    background-color: #ffefe5;
+    display: none;
+}
+
+.slipdown li:first-child {
+    display: block;
+}
+
+.slipdown li:last-child {
+    height: 80px;
+}
+
+.status_bar {
+    background-color: #f9f7e8;
+    margin: 40px 0;
+}
+
+.status_bar>div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.status_bar div:first-child {
+    display: none;
+}
+
+.status_bar img {
+    vertical-align: middle;
+}
+
+.animation {
+    position: absolute;
+    z-index: 10;
+}
+
+.a-upload {
+    padding: 4px 10px;
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    /* background: #fafafa; */
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    /* background: #eee; */
+    border-color: #ccc;
+    text-decoration: none
+}
