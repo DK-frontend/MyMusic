@@ -114,17 +114,26 @@ body {
 }
 
 .slipdown li {
+    position: relative;
     width: 400px;
     height: 100px;
     line-height: 80px;
     border-radius: 40px;
     background-color: #ffefe5;
-    display: none;
+    /* display: none; */
 }
 
-.slipdown li:first-child {
-    display: block;
+.slipdown li:nth-child(n+2):hover {
+    left: -3px;
+    top: -3px;
+    /* color: white; */
+    background-color: #fff;
 }
+
+
+/* .slipdown li:first-child {
+    display: block;
+} */
 
 .slipdown li:last-child {
     height: 80px;

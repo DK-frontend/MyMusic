@@ -158,7 +158,7 @@ function replay() {
 document.querySelector("#startIcon").onclick = startRecording
 document.querySelector("#stopIcon").onclick = stopRecording
 document.querySelector("#pauseIcon").onclick = pauseRecording
-document.querySelector(".slipdown").onmouseover = slipdown
+    // document.querySelector(".slipdown").onmouseover = slipdown
     // document.querySelector("#file").onchange = loadFile
 
 document.querySelector("#rect11").onclick = function() {
@@ -185,7 +185,7 @@ document.querySelector("#rect23").onclick = function() {
     stroke(1, 2)
     animations[5]()
 }
-document.onkeydown = function(event) {
+document.onkeyup = function(event) {
     switch (event.keyCode) {
         case 81:
             stroke(0, 0)
@@ -216,19 +216,27 @@ document.onkeydown = function(event) {
     }
 }
 
-function slipdown() {
-    for (let i = 0; i < lis.length; i++) {
-        lis[i].style.display = "block"
-        lis[i].onclick = function() {
-            for (let j = 0; j < lis.length; j++) {
-                lis[j].style.display = "none"
-            }
-            lis[i].style.display = "block"
-            bgMusic = bgMusics[i - 1]
-                // bgMusic = "./assets/audio/bgmusic2.mp3"
-        }
+for (let i = 0; i < lis.length; i++) {
+    lis[i].onclick = function() {
+        bgMusic = bgMusics[i - 1]
+        bgMusicObj.pause()
+        setRecordingFalse()
+        recordingSequence = []
     }
 }
+// function slipdown() {
+//     for (let i = 0; i < lis.length; i++) {
+//         lis[i].style.display = "block"
+//         lis[i].onclick = function() {
+//             for (let j = 0; j < lis.length; j++) {
+//                 lis[j].style.display = "none"
+//             }
+//             lis[i].style.display = "block"
+//             bgMusic = bgMusics[i - 1]
+//                 // bgMusic = "./assets/audio/bgmusic2.mp3"
+//         }
+//     }
+// }
 
 // function loadFile(file) {
 //     var fileReader = new FileReader();
@@ -246,6 +254,7 @@ function slipdown() {
 // }
 setInterval(() => {
     if (bgMusicObj.ended) {
+        recordingSequence = []
         setRecordingFalse()
     }
 }, 1000);
